@@ -25,10 +25,11 @@ for i, line in enumerate(data):
 
     cards_list.append(len(intersections))
 
-# Lots of ugly for loops in here
+# Lots of ugly for loops in here corresponding to lots
+# of scribbled notes to figure out the logic
 for i, card in enumerate(cards_list):
     for _ in range(cards[i + 1]):
-        for copy in range(i + 2, i + card + 2):
+        for copy in range(i + 2, i + 2 + card):
             cards[copy] += 1
     part2 += cards[i + 1]
 
